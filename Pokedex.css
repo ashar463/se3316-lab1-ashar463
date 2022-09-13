@@ -1,7 +1,27 @@
+ul{
+    list-style-type: none;
+}
+
+img{
+    float: left;
+    width: 32%;
+    margin-right: 1%;
+    margin-bottom: 0.5em; 
+    height: 300px;
+    object-fit: contain; 
+}
+
+h2{
+    margin-top: 1%;
+    margin-left: 1%;
+}
+
 body {
     background: #FFCC00;
     font-family:'Courier New', Courier, monospace;
 }
+
 h1 {
+    text-align: center;
     font-size: 36px;
 }
