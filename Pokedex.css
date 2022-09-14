@@ -2,13 +2,49 @@ ul{
     list-style-type: none;
 }
 
-img{
+img {
     float: left;
     width: 32%;
     margin-right: 1%;
     margin-bottom: 0.5em; 
     height: 300px;
-    object-fit: contain; 
+    object-fit: contain;
+}
+
+.image-grasspoison{
+    background-image: linear-gradient(to top right, green, rgb(179, 0, 179));
+}
+
+.image-fire {
+    background-color: red;
+}
+
+.image-fireflying {
+    background-image: linear-gradient(to top right, red, lightgray);
+}
+
+.image-water {
+    background-color: lightblue;
+}
+
+.image-bug {
+    background-color: lightgreen;
+}
+
+.image-bugflying {
+    background-image: linear-gradient(to top right, lightgreen, lightgray);
+}
+
+.image-bugpoison {
+    background-image: linear-gradient(to top right, lightgreen, rgb(179, 0, 179));
+}
+
+.image-normalflying {
+    background-image: linear-gradient(to top right, darkgray,lightgray);
+}
+
+.image-normal {
+    background-color: darkgray;
 }
 
 h2{
