@@ -1,14 +1,20 @@
-ul{
-    list-style-type: none;
+ul {
+    list-style: none;
+    display: inline;
+}
+
+li {
+    float: left;
+    width: 32%;
 }
 
 img {
     float: left;
-    width: 32%;
+    width: 80%;
     margin-right: 1%;
     margin-bottom: 0.5em; 
-    height: 300px;
-    object-fit: contain;
+    object-fit: fill;
+    text-align: center;
 }
 
 .image-grasspoison{
@@ -47,9 +53,10 @@ img {
     background-color: darkgray;
 }
 
-h2{
+footer{
     margin-top: 1%;
     margin-left: 1%;
+    font-weight: bold;
 }
 
 body {
