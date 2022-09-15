@@ -8,6 +8,15 @@ li {
     width: 32%;
 }
 
+h2 {
+    padding-left: 20%;
+}
+
+input {
+    float: left;
+    text-align: left;
+}
+
 img {
     float: left;
     width: 80%;
@@ -60,6 +69,7 @@ footer{
 }
 
 body {
+    padding-left: 8%;
     background: #FFCC00;
     font-family:'Courier New', Courier, monospace;
 }

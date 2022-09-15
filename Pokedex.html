@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <link rel="stylesheet" href="Pokedex.css">
+    <link rel="stylesheet" type="text/css" href="Pokedex.css">
 </head>
 
 <title>"Pokedex"</title>
@@ -10,116 +10,94 @@
 
 <h1>Pokedex</h1>
 
-<div class="search">
-    <form action="#">
-        <input type="number"
-            placeholder="Pokemon Number"
-            name="search">
-        <button>
-            <i class="fa fa-search"
-                style="font-size: 18px;">
-            </i>
-
-        </button>
-    </form>
-</div>
-
-<div class="search">
-    <form action="#">
-        <input type="text"
-            placeholder="Pokemon Name"
-            name="search">
-        <button>
-            <i class="fa fa-search"
-                style="font-size: 18px;">
-            </i>
-
-        </button>
-    </form>
-</div>
+<input id="searchbar1" onkeyup="search_pokemonNum()" type="number" name="search" placeholder="Pokemon Number">
+<input id="searchbar2" onkeyup="search_pokemonName()" type="text" name="search" placeholder="Pokemon Name"> <br><br>
 
 <ul>
-    <li>
+    <li class="pokemon">
         <h2>#001 Bulbasaur </h2>
         <footer>Grass/Poison</footer>
         <img src="pokemon/1.png" class="image-grasspoison">
-    <li>
+    <li class="pokemon">
         <h2>#002 Ivysaur </h2>
         <footer>Grass/Poison</footer>
         <img src="pokemon/2.png" class="image-grasspoison"></li>
-    <li>
+    <li class="pokemon">
             <h2>#003 Venusaur </h2>
             <footer>Grass/Poison</footer>
             <img src="pokemon/3.png" class="image-grasspoison"></li>
-    <li>
+    <li class="pokemon">
         <h2>#004 Charmander </h2>
         <footer>Fire</footer>
         <img src="pokemon/4.png" class="image-fire"></li>
-    <li>
+    <li class="pokemon">
         <h2>#005 Charmeleon </h2>
         <footer>Fire</footer>
         <img src="pokemon/5.png" class="image-fire"></li>
-    <li>
+    <li class="pokemon">
         <h2>#006 Charizard </h2>
         <footer>Fire/Flying</footer>
         <img src="pokemon/6.png" class="image-fireflying"></li>
-    <li>
+    <li class="pokemon">
         <h2>#007 Squirtle </h2>
         <footer>Water</footer>
         <img src="pokemon/7.png" class="image-water"></li>
-    <li>
+    <li class="pokemon">
         <h2>#008 Wartortle </h2>
         <footer>Water</footer>
         <img src="pokemon/8.png" class="image-water"></li>
-    <li>
+    <li class="pokemon">
         <h2>#009 Blastoise </h2>
         <footer>Water</footer>
         <img src="pokemon/9.png" class="image-water"></li>
-    <li>
+    <li class="pokemon">
         <h2>#010 Caterpie </h2>
         <footer>Bug</footer>
         <img src="pokemon/10.png" class="image-bug"></li>
-    <li>
+    <li class="pokemon">
         <h2>#011 Metapod </h2>
         <footer>Bug</footer>
         <img src="pokemon/11.png" class="image-bug"></li>
-    <li>
+    <li class="pokemon">
         <h2>#012 Butterfree </h2>
         <footer>Bug/Flying</footer>
         <img src="pokemon/12.png" class="image-bugflying"></li>
-    <li>
+    <li class="pokemon">
         <h2>#013 Weedle </h2>
         <footer>Bug/Poison</footer>
         <img src="pokemon/13.png" class="image-bugpoison"></li>
-    <li>
+    <li class="pokemon">
         <h2>#014 Kakuna </h2>
         <footer>Bug/Poison</footer>
         <img src="pokemon/14.png" class="image-bugpoison"></li>
-    <li>
+    <li class="pokemon">
         <h2>#015 Beedrill </h2>
         <footer>Bug/Poison</footer>
         <img src="pokemon/15.png" class="image-bugpoison"></li>
-    <li>
+    <li class="pokemon">
         <h2>#016 Pidgey </h2>
         <footer>Flying/Normal</footer>
         <img src="pokemon/16.png" class="image-normalflying"></li>
-    <li>
+    <li class="pokemon">
         <h2>#017 Pidgeotto </h2>
         <footer>Flying/Normal</footer>
         <img src="pokemon/17.png" class="image-normalflying"></li>
-    <li>
+    <li class="pokemon">
         <h2>#018 Pidgeot </h2>
         <footer>Flying/Normal</footer>
         <img src="pokemon/18.png" class="image-normalflying"></li>
-    <li>        
+    <li class="pokemon">        
         <h2>#019 Rattata </h2>
         <footer>Normal</footer>
         <img src="pokemon/19.png" class="image-normal"></li>
-    <li>
+    <li class="pokemon">
         <h2>#020 Raticate </h2>
         <footer>Normal</footer>
         <img src="pokemon/20.png" class="image-normal"></li>
 </ul>
+
+<script src="Pokedex.js"></script>
+
 </body>
 </html>
 
