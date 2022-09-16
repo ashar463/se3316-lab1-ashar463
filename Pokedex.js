@@ -21,7 +21,25 @@ function searchPokemonNum(){
 }
 
 function searchPokemonName(){
-    
+    var name = document.getElementById("pokeName").value;
+    var alertmsg = new String();
+    var counter = 0;
+    for(var i = 1; i <= 20; i++){
+        var pokeId = pad(i);
+        if(pokemon[i].substring(0,name.length).toLowerCase().includes(name) && counter < 6){
+            if(counter===0){
+                alertmsg = "Search Results";
+            }
+            alertmsg = alertmsg + ("\n" + pokemon[i] + "(#" + pokeId + ")\tType: " + type[i] + " \tEvolution Stage: " + evolutionStage[i] + "\tFurther Evolution: " + furtherEvo[i]);
+            counter++;
+        }
+    }
+
+    if(counter===0){
+        alertmsg = "No Results Found";
+    }
+
+    alert(alertmsg);
 }
 
 function pad(number) {
