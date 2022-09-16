@@ -4,14 +4,25 @@
     <link rel="stylesheet" type="text/css" href="Pokedex.css">
 </head>
 
+<script src="Pokedex.js"></script>
+
 <title>"Pokedex"</title>
 
 <body>
 
 <h1>Pokedex</h1>
 
-<input id="searchbar1" onkeyup="search_pokemonNum()" type="number" name="search" placeholder="Pokemon Number">
-<input id="searchbar2" onkeyup="search_pokemonName()" type="text" name="search" placeholder="Pokemon Name"> <br><br>
+<div>
+    <input type="number" id="pokeNum" placeholder="Pokemon Number" min="1" max="20" class="searchbar">
+    <input type="submit" value="Search By Number" id="search1" onclick="searchPokemonNum()" class="submitbutton">
+<div>
+
+<div>
+    <input type="text" id="pokeName" placeholder="Pokemon Name" class="searchbar" maxlength="20">
+    <input type="submit" value="Search By Name" id="search2" onclick="searchPokemonName()" class="submitbutton">
+<div>
+
+<br><br>
 
 <ul>
     <li class="pokemon">
@@ -94,9 +105,14 @@
         <h2>#020 Raticate </h2>
         <footer>Normal</footer>
         <img src="pokemon/20.png" class="image-normal"></li>
+    <li><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br></li>
 </ul>
 
-<script src="Pokedex.js"></script>
+<br><br><br>
+
+<h1>References</h1>
+<a href="https://www.kaggle.com/kvpratama/pokemon-images-dataset">https://www.kaggle.com/kvpratama/pokemon-images-dataset</a>
+<a href="https://www.reddit.com/r/TheSilphRoad/comments/7p952h/pokemon_go_pokedex_spreadsheet/">https://www.reddit.com/r/TheSilphRoad/comments/7p952h/pokemon_go_pokedex_spreadsheet/</a>
 
 </body>
 </html>
