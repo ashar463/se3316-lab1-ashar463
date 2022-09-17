@@ -15,7 +15,7 @@ function searchPokemonNum(){ //search code through number
             if(counter===0){ //if this is first pokemon result
                 alertmsg = "Search Results"; //add Search Result to alert message
             }
-            alertmsg = alertmsg + ("\n" + pokemon[i] + "(#" + pokeId + ")\tType: " + type[i] + " \tEvolution Stage: " + evolutionStage[i] + "\tFurther Evolution: " + furtherEvo[i]); 
+            alertmsg = alertmsg + ("\n" + pokemon[i] + "(#" + pokeId + ")\tType: " + type[i] + " \tEvolution Stage: " + evolutionStage[i] + "\n\t\t\tFurther Evolution: " + furtherEvo[i]); 
             //adds pokemon to alert message every time a pokemon meets requirement
             counter++; //adds 1 to counter to keep track of results
         }
@@ -36,11 +36,11 @@ function searchPokemonName(){ //search code through name
     var counter = 0; //declares counter to keep track of number of results
     for(var i = 1; i <= 20; i++){ //iterates through all pokemon
         var pokeId = pad(i); //turns pokemon number to #00X form
-        if(pokemon[i].substring(0,name.length).toLowerCase().includes(name) && counter < 6){ //if search starts with same characters as a pokemon
+        if(pokemon[i].toLowerCase().includes(name) && counter < 6){ //if search containes the same characters as a pokemon
             if(counter===0){ //if pokemon is first result
                 alertmsg = "Search Results"; //add Search Results to alert message
             }
-            alertmsg = alertmsg + ("\n" + pokemon[i] + "(#" + pokeId + ")\tType: " + type[i] + " \tEvolution Stage: " + evolutionStage[i] + "\tFurther Evolution: " + furtherEvo[i]);
+            alertmsg = alertmsg + ("\n" + pokemon[i] + "(#" + pokeId + ")\tType: " + type[i] + " \tEvolution Stage: " + evolutionStage[i] + "\n\t\t\tFurther Evolution: " + furtherEvo[i]);
             //adds pokemon to alert message every time a pokemon meets requirement
             counter++; //adds 1 to counter to keep track of results
         }
