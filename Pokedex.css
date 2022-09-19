@@ -1,18 +1,18 @@
-ul {
+ul { /*unordered list styling*/
     list-style: none;
     display: inline;
 }
 
-li {
+li { /*list styling*/
     float: left;
     width: 32%;
 }
 
-h2 {
+h2 { /*header 2 styling*/
     padding-left: 20%;
 }
 
-input {
+input { /*input styling*/
     float: left;
     text-align: left;
     font-family:'Courier New', Courier, monospace;
@@ -20,15 +20,15 @@ input {
     font-size: medium;
 }
 
-.searchbar {
+.searchbar { /*searchbar styling*/
     width: 15%;
 }
 
-.submitbutton{
+.submitbutton{ /*submit button styling*/
     margin-right: 10%;
 }
 
-img {
+img { /*image styling*/
     float: left;
     width: 80%;
     margin-right: 1%;
@@ -36,6 +36,8 @@ img {
     object-fit: fill;
     text-align: center;
 }
+
+/*background styling for all types below*/
 
 .image-grasspoison{
     background-image: linear-gradient(to top right, green, rgb(179, 0, 179));
@@ -73,19 +75,19 @@ img {
     background-color: darkgray;
 }
 
-footer{
+footer{ /*footer styling*/
     margin-top: 1%;
     margin-left: 1%;
     font-weight: bold;
 }
 
-body {
+body { /*body styling*/
     padding-left: 8%;
     background: #FFCC00;
     font-family:'Courier New', Courier, monospace;
 }
 
-h1 {
+h1 { /*header 1 styling*/
     text-align: center;
     font-size: 36px;
 }
