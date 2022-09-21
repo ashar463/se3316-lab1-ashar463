@@ -11,7 +11,7 @@ function searchPokemonNum(){ //search code through number
     for(var i = 1; i <= 20; i++){ //iterates through all pokemon
         var input = i.toString(); //turns input number to string
         var pokeId = pad(i); //turns number to #00X form
-        if(input.includes(num) && counter < 6){ //if input number is part of pokedex number
+        if(input.includes(num) && counter < 5){ //if input number is part of pokedex number
             if(counter===0){ //if this is first pokemon result
                 alertmsg = "Search Results"; //add Search Result to alert message
             }
@@ -36,7 +36,7 @@ function searchPokemonName(){ //search code through name
     var counter = 0; //declares counter to keep track of number of results
     for(var i = 1; i <= 20; i++){ //iterates through all pokemon
         var pokeId = pad(i); //turns pokemon number to #00X form
-        if(pokemon[i].toLowerCase().includes(name.toLowerCase()) && counter < 6){ //if search containes the same characters as a pokemon
+        if(pokemon[i].toLowerCase().includes(name.toLowerCase()) && counter < 5){ //if search containes the same characters as a pokemon
             if(counter===0){ //if pokemon is first result
                 alertmsg = "Search Results"; //add Search Results to alert message
             }
