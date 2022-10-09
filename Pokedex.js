@@ -69,14 +69,21 @@ function pad(number) { //function to turn number into #00X form
 
 }
 
-function displayResults(a) {    
+function displayResults(search) {    
     var resultsDiv = document.getElementById("results");
-    resultsDiv.innerHTML = "";
+    var pokemonList = document.querySelectorAll("li");
 
-    for (var j = 0; j < a; j++){
-        if(a = 1){
-            resultsDiv.innerHTML += '<ul><li class="searchLI"> <h2 class="searchH2">#001 Bulbasaur </h2> <footer>Grass/Poison</footer> <span>1/3</span> <footer>Weather: Clear</footer> <img src="pokemon/1.png" class="image-grasspoison" alt="Bulbasaur"></li></ul>';
-        }
-    }
+    console.log("button pressed");
+
+    /*while (resultsDiv.hasChildNodes()) {
+        resultsDiv.removeChild(resultsDiv.firstChild);
+    }*/
+
+    //const list = pokemonList.querySelector("li");
+
+    console.log(pokemonList[0]);
+
+    resultsDiv.appendChild(pokemonList[0].cloneNode(true));
+    resultsDiv.appendChild(pokemonList[1].cloneNode(true));
 
 }
