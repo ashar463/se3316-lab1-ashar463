@@ -10,6 +10,7 @@ function searchPokemonNum(){ //search code through number
     var num = document.getElementById("pokeNum").value; //gets user input
     var alertmsg = new String(); //creates new string for alert
     var counter = 0; //declares counter to keep rack of results
+    var pokeIds = [];
     for(var i = 1; i <= 20; i++){ //iterates through all pokemon
         var input = i.toString(); //turns input number to string
         var pokeId = pad(i); //turns number to #00X form
@@ -17,6 +18,7 @@ function searchPokemonNum(){ //search code through number
             if(counter===0){ //if this is first pokemon result
                 alertmsg = "Search Results"; //add Search Result to alert message
             }
+            pokeIds[i-1] = i;
             alertmsg = alertmsg + ("\n" + pokemon[i] + "(#" + pokeId + ")\tType: " + type[i] + " \tEvolution Stage: " + evolutionStage[i] + "\n\t\t\tWeather: " + weather[i]); 
             //adds pokemon to alert message every time a pokemon meets requirement
             counter++; //adds 1 to counter to keep track of results
@@ -25,19 +27,24 @@ function searchPokemonNum(){ //search code through number
     if(counter===0){ //if no pokemon match search
         alertmsg = "No Results Found, Please Enter a Number Between 1-20"; //number was not in range and requests a different number
     }
-    alert(alertmsg); //prints alert message   
+
+    displayResults(1);
+
+    //alert(alertmsg); //prints alert message   
 }
 
 function searchPokemonName(){ //search code through name
     var name = document.getElementById("pokeName").value; //gets user input
     var alertmsg = new String(); //creates new string for alert
     var counter = 0; //declares counter to keep track of number of results
+    var pokeIds = [];
     for(var i = 1; i <= 20; i++){ //iterates through all pokemon
         var pokeId = pad(i); //turns pokemon number to #00X form
         if(pokemon[i].toLowerCase().includes(name.toLowerCase()) && counter < 5){ //if search containes the same characters as a pokemon
             if(counter===0){ //if pokemon is first result
                 alertmsg = "Search Results"; //add Search Results to alert message
             }
+            pokeIds[i-1] = i;
             alertmsg = alertmsg + ("\n" + pokemon[i] + "(#" + i + ")\tType: " + type[i] + " \tEvolution Stage: " + evolutionStage[i] + "\n\t\t\tWeather: " + weather[i]);
             //adds pokemon to alert message every time a pokemon meets requirement
             counter++; //adds 1 to counter to keep track of results
@@ -62,7 +69,14 @@ function pad(number) { //function to turn number into #00X form
 
 }
 
-function displayResults() {    
-    const ul = document.getElementById("results");
-    ul.innerHTML += "test";
+function displayResults(a) {    
+    var resultsDiv = document.getElementById("results");
+    resultsDiv.innerHTML = "";
+
+    for (var j = 0; j < a; j++){
+        if(a = 1){
+            resultsDiv.innerHTML += '<ul><li class="searchLI"> <h2 class="searchH2">#001 Bulbasaur </h2> <footer>Grass/Poison</footer> <span>1/3</span> <footer>Weather: Clear</footer> <img src="pokemon/1.png" class="image-grasspoison" alt="Bulbasaur"></li></ul>';
+        }
+    }
+
 }

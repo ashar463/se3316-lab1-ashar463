@@ -9,7 +9,19 @@ li { /*list styling*/
 }
 
 h2 { /*header 2 styling*/
-    padding-left: 20%;
+    text-align: center;
+    padding-right: 15%;
+}
+
+.searchLI {
+    padding-left: 2%;
+    float: left;
+    width: 20%;
+    background-color: aliceblue;
+}
+
+.searchH2 {
+    text-align: center;
 }
 
 input { /*input styling*/
@@ -26,6 +38,12 @@ input { /*input styling*/
 
 .submitbutton{ /*submit button styling*/
     margin-right: 10%;
+}
+
+span {
+    float:right;
+    padding-right:20%;
+    font-weight: bold;
 }
 
 img { /*image styling*/
