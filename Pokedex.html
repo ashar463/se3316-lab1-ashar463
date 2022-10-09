@@ -16,12 +16,15 @@
 
 <div>
     <input type="text" id="pokeName" placeholder="Pokemon Name" class="searchbar" maxlength="20">
-    <input type="submit" value="Search By Name" id="search2" onclick="searchPokemonName()" class="submitbutton">
+    <input type="submit" value="Search By Name" id="search2" onclick="displayResults()" class="submitbutton">
 </div>
 
 <br><br>
+<div id="results">
 
-<ul>
+</div>
+
+<ul id="list">
     <li class="pokemon">
         <h2>#001 Bulbasaur </h2>
         <footer>Grass/Poison</footer>

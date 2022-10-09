@@ -4,6 +4,8 @@ const type = ["","Grass/Poison","Grass/Poison","Grass/Poison","Fire","Fire","Fir
 const evolutionStage = ["","1/3","2/3","3/3","1/3","2/3","3/3","1/3","2/3","3/3","1/3","2/3","3/3","1/3","2/3","3/3","1/3","2/3","3/3","1/2","2/2"];
 const weather = ["", "Clear", "Clear", "Clear", "Clear", "Clear", "Clear", "Rain", "Rain", "Rain", "Rain", "Rain", "Rain", "Rain", "Rain", "Rain", "Partly Cloudy", "Partly Cloudy", "Partly Cloudy", "Partly Cloudy", "Partly Cloudy"];
 
+const gridDiv = document.getElementById("unorderedlist")
+
 function searchPokemonNum(){ //search code through number
     var num = document.getElementById("pokeNum").value; //gets user input
     var alertmsg = new String(); //creates new string for alert
@@ -15,7 +17,7 @@ function searchPokemonNum(){ //search code through number
             if(counter===0){ //if this is first pokemon result
                 alertmsg = "Search Results"; //add Search Result to alert message
             }
-            alertmsg = alertmsg + ("\n" + pokemonInfo[i].pokemon + "(#" + pokeId + ")\tType: " + type[i] + " \tEvolution Stage: " + evolutionStage[i] + "\n\t\t\tWeather: " + weather[i]); 
+            alertmsg = alertmsg + ("\n" + pokemon[i] + "(#" + pokeId + ")\tType: " + type[i] + " \tEvolution Stage: " + evolutionStage[i] + "\n\t\t\tWeather: " + weather[i]); 
             //adds pokemon to alert message every time a pokemon meets requirement
             counter++; //adds 1 to counter to keep track of results
         }
@@ -58,4 +60,9 @@ function pad(number) { //function to turn number into #00X form
    
     return str; //returns padded number
 
+}
+
+function displayResults() {    
+    const ul = document.getElementById("results");
+    ul.innerHTML += "test";
 }
