@@ -18,7 +18,7 @@ function searchPokemonNum(){ //search code through number
             if(counter===0){ //if this is first pokemon result
                 alertmsg = "Search Results"; //add Search Result to alert message
             }
-            pokeIds[i-1] = i;
+            displayResults(i);
             alertmsg = alertmsg + ("\n" + pokemon[i] + "(#" + pokeId + ")\tType: " + type[i] + " \tEvolution Stage: " + evolutionStage[i] + "\n\t\t\tWeather: " + weather[i]); 
             //adds pokemon to alert message every time a pokemon meets requirement
             counter++; //adds 1 to counter to keep track of results
@@ -44,7 +44,7 @@ function searchPokemonName(){ //search code through name
             if(counter===0){ //if pokemon is first result
                 alertmsg = "Search Results"; //add Search Results to alert message
             }
-            pokeIds[i-1] = i;
+            displayResults(i);
             alertmsg = alertmsg + ("\n" + pokemon[i] + "(#" + i + ")\tType: " + type[i] + " \tEvolution Stage: " + evolutionStage[i] + "\n\t\t\tWeather: " + weather[i]);
             //adds pokemon to alert message every time a pokemon meets requirement
             counter++; //adds 1 to counter to keep track of results
@@ -55,7 +55,7 @@ function searchPokemonName(){ //search code through name
         alertmsg = "No Results Found, Please Only Use A-Z and a-z or Double Check Spelling"; //urges user to double check their input for proper characters and spelling
     }
 
-    alert(alertmsg); //prints alert
+    //alert(alertmsg); //prints alert
 }
 
 function pad(number) { //function to turn number into #00X form
@@ -69,21 +69,42 @@ function pad(number) { //function to turn number into #00X form
 
 }
 
-function displayResults(search) {    
-    var resultsDiv = document.getElementById("results");
-    var pokemonList = document.querySelectorAll("li");
+const div = document.createElement("div");
+const ul  = document.createElement("ul");
+div.id = "newDivision";
+ul.id = "displayList";
+document.body.insertBefore(div, document.getElementById("list"));
+document.getElementById("newDivision").appendChild(ul);
 
-    console.log("button pressed");
+var nodeList = document.querySelectorAll("li");
 
-    /*while (resultsDiv.hasChildNodes()) {
-        resultsDiv.removeChild(resultsDiv.firstChild);
-    }*/
 
-    //const list = pokemonList.querySelector("li");
+function nameResults(){
 
-    console.log(pokemonList[0]);
+    while (document.getElementById("displayList").firstChild){ 
+        document.getElementById("displayList").removeChild(document.getElementById("displayList").firstChild); 
+    }
 
-    resultsDiv.appendChild(pokemonList[0].cloneNode(true));
-    resultsDiv.appendChild(pokemonList[1].cloneNode(true));
+    let nameOfPokemon = document.getElementById("pokeName").value;
+    for(let i = 0; i < nodeList.length; i++){
+        if(nodeList.item(i).children.item(0).textContent.toLowerCase().split(" ")[1].trim().includes(nameOfPokemon.toLowerCase()) && nameOfPokemon != ""){
+            let listElement = nodeList.item(i).cloneNode(true);
+            document.getElementById("displayList").appendChild(listElement);
+        }
+    }
+}
 
+function numResults(){
+
+    while (document.getElementById("displayList").firstChild){ 
+        document.getElementById("displayList").removeChild(document.getElementById("displayList").firstChild); 
+    }
+
+    let nameOfPokemon = document.getElementById("pokeNum").value;
+    for(let i = 0; i < nodeList.length; i++){
+        if(nodeList.item(i).children.item(0).textContent.toLowerCase().split(" ")[0].trim().includes(nameOfPokemon.toLowerCase()) && nameOfPokemon != ""){
+            let listElement = nodeList.item(i).cloneNode(true);
+            document.getElementById("displayList").appendChild(listElement);
+        }
+    }
 }

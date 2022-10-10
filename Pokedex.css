@@ -4,6 +4,7 @@ ul { /*unordered list styling*/
 }
 
 li { /*list styling*/
+    padding-top: 10%;
     float: left;
     width: 32%;
 }
@@ -18,7 +19,6 @@ h2 { /*header 2 styling*/
     float: left;
     width: 20%;
     background-color: aliceblue;
-    
 }
 
 .searchH2 {
